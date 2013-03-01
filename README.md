@@ -1,7 +1,11 @@
-yii-interval-format
+yii-date-interval-format
 ===================
 
-Format date intervals in a language-independent manner.
+Yii extension to format a date interval into text as compactly as possible.
+
+Should work with any language which has date and time definitions in Yii.
+
+The time may also be shown, and the date format can be either 'medium' or 'long'.
 
 ###Example
 
