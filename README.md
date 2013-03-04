@@ -7,7 +7,41 @@ Should work with any language which has date and time definitions in Yii.
 
 The time may also be shown, and the date format can be either 'medium' or 'long'.
 
-###Example
+###Usage
+```php
+// Initial start and end date-times.
+$partyStart = new DateTime('2012-12-25 18:00');
+$partyEnd = new DateTime('2012-12-26 04:00');
+
+// Instantiate the interval format.
+$interval = new EDateIntervalFormat($partyStart, $partyEnd);
+
+// Optionaly, set the date width: 'medium' (default) or 'long'.
+$interval->setdateWidth('long');
+
+// Two ways to output the formated interval with time:
+
+// 1) Set the showTime variable and print.
+$interval->showTime = true;
+echo $interval;
+$interval->showTime = false;
+echo $interval;
+
+// 2) Choose the formating function directly.
+echo $interval->getFormatDateTime();
+echo $interval->getFormatDate();
+
+// You may keep the same formater object and set the start or end date-time.
+// Also, the start time may not necessarily be before the end time.
+$now = new DateTime('1985-10-26 01:22');
+$testTimeMachine = new DateTime('1955-11-05 01:21');
+$interval->setStartDateTime($now);
+$interval->setEndDateTime($testTimeMachine);
+echo $interval;
+
+```
+
+###Examples
 
 ####Code
 ```php
