@@ -7,7 +7,7 @@ Should work with any language which has date and time definitions in Yii.
 
 The time may also be shown, and the date format can be either 'medium' or 'long'.
 
-###Usage
+##Usage
 ```php
 // Initial start and end date-times.
 $partyStart = new DateTime('2012-12-25 18:00');
@@ -41,9 +41,9 @@ echo $interval;
 
 ```
 
-###Examples
+##Examples
 
-####Code
+###Code
 ```php
 Yii::import('ext.interval-format.EDateIntervalFormat');
 
@@ -78,7 +78,7 @@ $interval->showTime = true;
 print "$interval\n";
 ```
 
-####Output
+###Output
 
 French
 ```
